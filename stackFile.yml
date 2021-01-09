@@ -28,6 +28,7 @@ services:
       PASSWORD: "{{=service('db').get('userPassword')}}"
     volumes:
       - directory: /var/lib/odoo
+      sync: true
     volumesUID: 101
     deployTo:
       - odoo
